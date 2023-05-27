@@ -1,6 +1,6 @@
 # JNIwiz
 #### 2023 CNU Project Fair
-Team HOLO
+Team HOLO  
 Member 김수빈
 
 ## Preliminary
