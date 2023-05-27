@@ -1,0 +1,36 @@
+apply plugin: 'application'
+
+mainClassName = 'example.WalaTest' 
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src'
+        }
+    }
+}
+
+repositories {
+    mavenCentral() 
+}
+
+dependencies {
+	implementation files(
+		'/home/greenare0410/Documents/repo/WALA/com.ibm.wala.core/build/libs/com.ibm.wala.core-1.6.0-SNAPSHOT.jar',
+		'/home/greenare0410/Documents/repo/WALA/com.ibm.wala.util/build/libs/com.ibm.wala.util-1.6.0-SNAPSHOT.jar', 
+		'/home/greenare0410/Documents/repo/WALA/com.ibm.wala.shrike/build/libs/com.ibm.wala.shrike-1.6.0-SNAPSHOT.jar', 
+		'/home/greenare0410/Documents/repo/WALA/com.ibm.wala.ide/build/libs/com.ibm.wala.ide-1.6.0-SNAPSHOT.jar',
+		'/home/greenare0410/Documents/repo/WALA/com.ibm.wala.cast/build/libs/com.ibm.wala.cast-1.6.0-SNAPSHOT.jar')
+}
+
+jar {
+  manifest {
+    attributes(
+      'Main-Class': 'example.WalaTest'
+    )
+  }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
