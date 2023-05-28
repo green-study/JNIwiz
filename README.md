@@ -1,7 +1,11 @@
-# JNIwiz
+# JNIwiz: JNI 상호작용 실행 오류 탐지기 자동 합성
 #### 2023 CNU Project Fair
 Team HOLO  
 Member 김수빈
+
+#### 비고
+LLVM, WALA는 외부 기술로 별도 설치가 필요합니다.
+해당 소스코드에 사용된 경로는 대다수가 절대경로로 추후 상대경로로 변경될 예정입니다.
 
 ## Preliminary
 ### Install LLVM
