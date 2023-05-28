@@ -1,6 +1,6 @@
 #!/bin/bash
 file_name="$1"
-jar_name="$2"
+jar_name="TestJNI"
 
 echo "============================================================================"
 echo "[Extracting Java information]"
@@ -32,7 +32,7 @@ g++ -I"<JAVA_HOME>\include" -I"<JAVA_HOME>\include\win32" -fPIC -shared -o myjni
 echo ""
 echo ""
 echo "============================================================================"
-echo "[JNIwiz execution error detectio JNI version]"
+echo "[JNIwiz execution error detection JNI version]"
 echo "============================================================================"
 sed -i 's/jni.h/jni_test_instrumented.h/' "$jar_name.cpp" && g++ -I"<JAVA_HOME>\include" -I"<JAVA_HOME>\include\win32" -fPIC -shared -o myjni.so "$jar_name".cpp && javac "$jar_name".java && java "$jar_name"
 
