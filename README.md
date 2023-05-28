@@ -6,7 +6,7 @@ Member 김수빈
 #### 비고  
 LLVM, WALA는 외부 기술로 별도 설치가 필요합니다.  
 해당 소스코드에 사용된 경로는 대다수가 절대경로로 추후 상대경로로 변경될 예정입니다.    
-각 폴더의 기능 테스트를 원한다면 jni-project, WALA_test 폴더 내의 .sh 파일을 사용합니다.  
+각 폴더의 기능 테스트를 원한다면 jni-project/example, WALA_test 폴더 내의 .sh 파일을 사용합니다.  
 전체 기능 테스트를 원한다면 Demo 폴더 내의 .sh 파일을 사용합니다.  
 
 ## Preliminary
